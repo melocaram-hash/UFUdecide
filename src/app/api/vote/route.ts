@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { isValidUFUEmail, hashEmail, getSupabaseAdmin } from '@/lib/utils'
 
+export const dynamic = 'force-dynamic'
+
 const VALID_CHOICES = ['favor', 'contra', 'abstencao'] as const
 type Choice = (typeof VALID_CHOICES)[number]
 

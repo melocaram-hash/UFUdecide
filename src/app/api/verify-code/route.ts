@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { isValidUFUEmail, hashEmail, getSupabaseAdmin } from '@/lib/utils'
 import { randomUUID } from 'crypto'
 
+export const dynamic = 'force-dynamic'
+
 const MAX_ATTEMPTS = 5
 
 export async function POST(request: NextRequest) {
